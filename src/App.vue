@@ -1,23 +1,23 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <v-header></v-header>
+      <router-view></router-view>
+    <v-foot></v-foot>
   </div>
 </template>
 
 <script>
+  import Header from '@/components/public/Header'
+  import Foot from '@/components/public/Foot'
 export default {
+  components: {
+    'v-header': Header,
+    'v-foot': Foot
+  },
   name: 'app'
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
