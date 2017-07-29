@@ -3,14 +3,18 @@ import router from '../main';
 //post 请求
 function fetchPost(url, params = {}) {
   //请求加载
+  /*let userInfo;
   let token = getCookie('token'); //h5 的浏览器缓存
-  let userInfo = JSON.parse(getCookie('userInfo'));
+  if(getCookie('userInfo')){
+    userInfo = JSON.parse(getCookie('userInfo'));
+  }
+
   if (token) {
     params.token = token;
   }
   if(userInfo){
     params.uid = userInfo.id;
-  }
+  }*/
   return new Promise((resolve, reject) => {
     axios({
       method: 'post',
@@ -21,12 +25,10 @@ function fetchPost(url, params = {}) {
       console.log('返回数据 === ');
       console.log(response);
 
-      console.log('status == ' + response.data.content);
       if(response.data.status !== 1){
         reject(response.data.msg);
         return;
       }
-
 
       if(response.data.token){
         setCookie('token',response.data.token);
@@ -71,9 +73,7 @@ const path = {
   getServerList: 'common/getServerList',
   getRateList: 'order/getRateList',
   getRateDetail: 'order/getRateDetail',
-  getCustomerList: 'Customer/getCustomerList',
-  disableCustomer: 'Customer/disableCustomer',
-  enableCustomer: 'Customer/enableCustomer',
+  addOrder: 'order/addOrder',
   getCustomerDetail: 'Customer/getCustomerDetail',
   getSettlementList: 'Settlement/getSettlementList',
   recharge: 'Settlement/recharge',

@@ -33,6 +33,10 @@
     watch: {
       footId (val, old){
         this.$router.push({path: val});
+      },
+      $route (val, oldVal) {
+        console.log(val.path);
+        this.footId = val.path;
       }
     },
     methods: {}

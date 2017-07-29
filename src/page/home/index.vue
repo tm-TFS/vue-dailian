@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <v-header></v-header>
     <!--<mt-navbar class="choose" v-model="selected">
       <mt-tab-item :id="item.id" v-for="item in headerTab2" :key="item.id" @click="change(item.id)">
         {{ item.name }}
@@ -39,9 +40,11 @@
 <script type="text/ecmascript-6">
   import api from '@/fetch/api';
   import FilterBar from '@/components/filter-bar/FilterBar';
+  import Header from '@/components/public/Header'
   export default {
     name: 'index',
     components: {
+      'v-header': Header,
       'filter-bar': FilterBar
     },
     data () {
@@ -309,7 +312,6 @@
           order: 'desc'
         },
         rateList: [],
-        html_con: "铂金4-铂金3 明文110 \n 王者荣耀/苹果微信 默认福 \n 保证金 100\n发布人： 咻咻咻",
         headerTab2: [
           {
             id: 1,
@@ -330,14 +332,6 @@
         content: [
           {
             id: 1,
-            content: []
-          },
-          {
-            id: 2,
-            content: []
-          },
-          {
-            id: 3,
             content: []
           }
         ]
