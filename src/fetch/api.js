@@ -69,6 +69,8 @@ function getCookie(name) {
 }
 
 const path = {
+  getSpecials: 'common/getSpecials',
+  getSpecialDetail: 'common/getSpecialDetail',
   login: 'common/login',
   getServerList: 'common/getServerList',
   getRateList: 'order/getRateList',

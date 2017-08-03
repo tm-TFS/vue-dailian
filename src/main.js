@@ -7,6 +7,13 @@ import router from './router'
 //引入mint-ui
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
+import '@/assets/css/mui.css'
+import '@/assets/css/LArea.min.css'
+
+
+import mui from '@/assets/js/mui.min.js'
+import '@/assets/js/LArea.js'
+Vue.prototype.mui = mui;
 
 //引入iview
 import iView from 'iview'
@@ -20,7 +27,7 @@ fastclick.attach(document.body);
 
 Vue.config.productionTip = false;
 Vue.use(MintUI);
-Vue.use(iView)
+Vue.use(iView);
 
 Vue.config.productionTip = false;
 

@@ -7,6 +7,8 @@ import Index from '@/page/home/index'
 import orderList from '@/page/order/orderList'
 import publish from '@/page/publish/index'
 import mine from '@/page/mine/index'
+import specialSearch from '@/page/search/searchSpecial'
+import specialDetail from '@/page/search/specialDetail'
 
 Vue.use(Router);
 
@@ -14,6 +16,10 @@ const router = new Router({
   routes: [
     {
       path: '/',
+      redirect: '/specialSearch'
+    },
+    {
+      path: '/index',
       name: 'Index',
       component: Index
     },
@@ -31,6 +37,16 @@ const router = new Router({
       path: '/mine',
       name: 'mine',
       component: mine
+    },
+    {
+      path: '/specialSearch',
+      name: 'specialSearch',
+      component: specialSearch
+    },
+    {
+      path: '/specialDetail/:id',
+      name: 'specialDetail',
+      component: specialDetail
     },
   ]
 });

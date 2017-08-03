@@ -36,6 +36,9 @@
       },
       $route (val, oldVal) {
         console.log(val.path);
+        if(val.path.indexOf('specialDetail') > -1 || val.path.indexOf('searchSpecial') > -1 ){
+          this.footShow = false;
+        }
         this.footId = val.path;
       }
     },
