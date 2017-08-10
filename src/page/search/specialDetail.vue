@@ -4,19 +4,22 @@
       <a class="mui-action-back mui-icon mui-icon-arrowleft mui-pull-left"></a>
       <h1 class="mui-title">{{special.specialName}}</h1>
     </header>
-    <ul class="mui-table-view">
-      <li class="mui-table-view-cell">专业名称： {{special.specialName}}</li>
-      <li class="mui-table-view-cell">{{special.xueke}}</li>
-      <li class="mui-table-view-cell">{{special.target}}</li>
-      <li class="mui-table-view-cell" v-show="special.course">{{special.course}}</li>
-      <li class="mui-table-view-cell">{{special.jobDirection}}</li>
-      <li class="mui-table-view-cell" @click="dangdangSearch()">
-        <a class="mui-navigate-right" style="color: #26a2ff">{{special.specialName}} 当当网销售前10书籍</a>
-      </li>
-      <li class="mui-table-view-cell" @click="zhihuSearch()">
-        <a class="mui-navigate-right" style="color: #26a2ff">{{special.specialName}} 知乎上的热门问答</a>
-      </li>
-    </ul>
+    <div class="mui-content">
+      <ul class="mui-table-view">
+        <li class="mui-table-view-cell">专业名称： {{special.specialName}}</li>
+        <li class="mui-table-view-cell">{{special.xueke}}</li>
+        <li class="mui-table-view-cell">{{special.target}}</li>
+        <li class="mui-table-view-cell" v-show="special.course">{{special.course}}</li>
+        <li class="mui-table-view-cell">{{special.jobDirection}}</li>
+        <li class="mui-table-view-cell" @click="dangdangSearch()">
+          <a class="mui-navigate-right" style="color: #26a2ff">{{special.specialName}} 当当网销售前10书籍</a>
+        </li>
+        <li class="mui-table-view-cell" @click="zhihuSearch()">
+          <a class="mui-navigate-right" style="color: #26a2ff">{{special.specialName}} 知乎上的热门问答</a>
+        </li>
+      </ul>
+    </div>
+
   </div>
 </template>
 
@@ -84,7 +87,4 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-.detail{
-  margin 4% 3%
-}
 </style>

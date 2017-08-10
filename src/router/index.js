@@ -7,6 +7,8 @@ import Index from '@/page/home/index'
 import orderList from '@/page/order/orderList'
 import publish from '@/page/publish/index'
 import mine from '@/page/mine/index'
+import goodsList from '@/page/goods/list'
+import login from '@/page/login/login'
 import specialSearch from '@/page/search/searchSpecial'
 import specialDetail from '@/page/search/specialDetail'
 
@@ -17,6 +19,16 @@ const router = new Router({
     {
       path: '/',
       redirect: '/specialSearch'
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: login
+    },
+    {
+      path: '/goodsList',
+      name: 'goodsList',
+      component: goodsList
     },
     {
       path: '/index',

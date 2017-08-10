@@ -5,29 +5,25 @@ import App from './App'
 import router from './router'
 
 //引入mint-ui
-import MintUI from 'mint-ui'
-import 'mint-ui/lib/style.css'
+/*import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'*/
 import '@/assets/css/mui.css'
 import '@/assets/css/LArea.min.css'
-
+import '@/common/stylus/index.styl';
 
 import mui from '@/assets/js/mui.min.js'
 import '@/assets/js/LArea.js'
 Vue.prototype.mui = mui;
-
+/*
 //引入iview
 import iView from 'iview'
-import 'iview/dist/styles/iview.css'
+import 'iview/dist/styles/iview.css'*/
 
 import '@/assets/ali-icon/iconfont.css'
 import '@/assets/reset.css'
 
-import fastclick from 'fastclick';
-fastclick.attach(document.body);
-
-Vue.config.productionTip = false;
-Vue.use(MintUI);
-Vue.use(iView);
+/*import fastclick from 'fastclick';
+fastclick.attach(document.body);*/
 
 Vue.config.productionTip = false;
 

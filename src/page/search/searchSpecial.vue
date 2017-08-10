@@ -2,7 +2,7 @@
 <div class="search">
   <div class="mui-row">
     <div class="mui-col-xs-10 mui-col-sm-10 ">
-      <div class="mui-input-row mui-search">
+      <div class="mui-input-row my-search">
         <input type="search" class="mui-input-clear " placeholder="专业名称搜索" v-model="specialName">
       </div>
     </div>
@@ -39,37 +39,6 @@
 
       },
       getDetail(item){
-        //console.log(item.content);
-        /*let content = item.content;
-        let params = {id: item.id, specialName: item.specialname};
-        let xueke_index,menlei_index,target_index,course_index,jobDirection_index;
-        xueke_index = content.indexOf('学科');
-        menlei_index = content.indexOf('门类');
-
-        target_index = content.indexOf('业务培养目标');
-        course_index = content.indexOf('主要课程');
-        jobDirection_index = content.indexOf('就业方向');
-
-        if(target_index === -1){
-          target_index = content.indexOf('培养目标');
-        }
-
-        if(jobDirection_index === -1){
-          jobDirection_index = content.indexOf('毕业生应获得以下几方面的知识和能力');
-        }
-
-        params.xueke = content.substring(xueke_index,menlei_index);
-        params.menlei = content.substring(menlei_index,target_index);
-        if(course_index === -1){
-          params.target = content.substring(target_index,jobDirection_index);
-          params.course = "";
-        } else {
-          params.target = content.substring(target_index,course_index);
-          params.course = content.substring(course_index,jobDirection_index);
-        }
-        params.jobDirection = content.substring(jobDirection_index,10000);
-
-        console.log(params);*/
         this.$router.push({path: '/specialDetail/' + item.id});
       }
     },
@@ -83,7 +52,7 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-.mui-search{
+.my-search{
   margin-right 4%
 }
 .mui-row {

@@ -5,7 +5,8 @@ import router from '../main';
 axios.defaults.timeout = 5000;
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
 //axios.defaults.baseURL = 'http://192.168.0.103:9001/public/index';
-axios.defaults.baseURL = 'http://www.tp5.bd/public/index';
+//axios.defaults.baseURL = 'http://www.tp5.bd/public/index';
+axios.defaults.baseURL = 'http://139.196.90.218:9001/public/index';
 
 //POST传参序列化
 axios.interceptors.request.use((config) => {
